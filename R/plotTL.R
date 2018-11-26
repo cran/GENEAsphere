@@ -10,7 +10,7 @@
 #'@param end End of Data to plot.
 #'@param length Length of interval 
 #'@param resolution Resolution to plot the data given the data's frequency. 
-#'@importFrom GENEAread get.intervals epoch.apply
+#'@importFrom GENEAread get.intervals apply.epoch
 #'@importFrom graphics abline axis box contour grid image legend mtext par plot points rect text frame
 #'@export
 #'
@@ -18,14 +18,16 @@
 #'
 #'@examples
 #'
+#' \dontrun{
 #' x = readRDS(system.file("extdata", "AccData.rds", package = "GENEAsphere"))
 #' plotTL(x)
+#' }
 
 plotTL = function(AccData, start = NULL, end = NULL, length = NULL, resolution = 100){
   
-  epoch = floor(nrow(AccData)/resolution + 1)/AccData$freq
-  lightobj = epoch.apply(AccData, epoch, incl.date = T, FUN = function(t) max(t[,5]))
-  tempobj = epoch.apply(AccData, epoch, incl.date = T, function(t) mean(t[,7]))
+  epoch = floor(nrow(AccData$data.out)/resolution + 1)/AccData$freq
+  lightobj = apply.epoch(AccData$data.out, epoch, incl.date = T, FUN = function(t) max(t[,5]))
+  tempobj = apply.epoch(AccData$data.out, epoch, incl.date = T, function(t) mean(t[,7]))
   time =  as.POSIXct(as.numeric(as.character(round(as.numeric(convert.time(lightobj[,1]))))), origin = "1970-01-01",tz="GMT")
   light = lightobj[,2]
   temp = tempobj[,2]

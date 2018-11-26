@@ -19,8 +19,10 @@
 #'@export
 #'
 #'@examples
+#'\dontrun{
 #' x = readRDS(system.file("extdata", "AccData.rds", package = "GENEAsphere"))
 #' positionals(x)
+#' }
 
 
 positionals = function(AccData, start = 0, end = 1, length = NULL, max.points = 1e6,  ...){

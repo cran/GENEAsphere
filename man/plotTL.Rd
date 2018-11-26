@@ -28,6 +28,8 @@ Creates a temperature and ligth plot with 2 distinct axis from epoched data. The
 }
 \examples{
 
+\dontrun{
 x = readRDS(system.file("extdata", "AccData.rds", package = "GENEAsphere"))
 plotTL(x)
+}
 }

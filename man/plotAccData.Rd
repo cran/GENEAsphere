@@ -17,7 +17,7 @@ plotAccData(x, what = c("sd", "mean", "temperature", "light", "voltage"),
 \item light
 \item voltage}}
 
-\item{draw}{if FALSE, plot a whole new plot. Otherwise, superimpose on to existing plot.}
+\item{draw}{if TRUE, plot a whole new plot. Otherwise, superimpose on to existing plot.}
 
 \item{resolution}{Resolution of plot to create.}
 
@@ -32,13 +32,15 @@ From the raw data to create a representation of light, temperature and MAGSA (Me
 Creates a line plot at a certain resolution from the GENEAread AccData objects available.
 }
 \examples{
+\dontrun{
 ## AccData = read.bin(datafile) # where data file is a GENEActiv .bin file.
 ## saveRDS(AccData , "AccData.rds")
 x = readRDS(system.file("extdata", "AccData.rds", package = "GENEAsphere"))
-plot.AccData(x, what = ("sd"))
-plot.AccData(x, what = ("sd"))
-plot.AccData(x, what = ("mean"))
-plot.AccData(x, what = ("temperature"))
-plot.AccData(x, what = ("light"))
-plot.AccData(x, what = ("voltage"))
+plotAccData(x, what = ("sd"))
+plotAccData(x, what = ("sd"))
+plotAccData(x, what = ("mean"))
+plotAccData(x, what = ("temperature"))
+plotAccData(x, what = ("light"))
+plotAccData(x, what = ("voltage"))
+}
 }

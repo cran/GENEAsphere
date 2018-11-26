@@ -23,11 +23,12 @@
 #' @export 
 #' 
 #' @examples 
+#' \dontrun{
 #' segmentationCSV = system.file("data", "SegData.csv", package = "GENEAsphere")
 #' plotRows = c(1:1)
-#' plotSegmentSphere(segmentationCSV, plotRows, levels = c(0.9, 0.75, 0.5, 0.25, 0.1), 
-#'                   singlePlot = TRUE, col = heat.colors(5), 
-#'                   alpha = c(0.03, 0.05, 0.1, 0.2, 0.3), arrow = FALSE, nsims = 1000)
+#' plotSegmentSphere(segmentationCSV, plotRows, levels = c(0.9, 0.75, 0.5, 0.25, 0.1),
+#'                   singlePlot = TRUE, col = heat.colors(5),
+#'                   alpha = c(0.03, 0.05, 0.1, 0.2, 0.3), arrow = FALSE, nsims = 1000)}
 
 plotSegmentSphere <- function(segmentationCSV, plotRows, levels = c(0.9, 0.75, 0.5, 0.25, 0.1), singlePlot = TRUE, col = heat.colors(5), 
 		alpha = c(0.03, 0.05, 0.1, 0.2, 0.3), arrow = FALSE, nsims = 1000){
@@ -108,11 +109,12 @@ plotSegmentSphere <- function(segmentationCSV, plotRows, levels = c(0.9, 0.75, 0
 #' @export 
 #' 
 #' @examples 
+#' \dontrun{
 #' segmentationCSV = system.file("data", "SegData.csv", package = "GENEAsphere")
 #' plotRows = c(1:5)
-#' plotSegmentFlat(segmentationCSV, plotRows, 
-#'                 col = c("white",heat.colors(5, alpha = c(0.3, 0.2, 0.1, 0.05, 0.03))),
-#'                 singlePlot = TRUE, nsims= 1000)
+#' plotSegmentFlat(segmentationCSV, plotRows,
+#'                 col = c("white", heat.colors(5, alpha = c(0.3, 0.2, 0.1, 0.05, 0.03))),
+#'                 singlePlot = TRUE, nsims= 1000)}
 
 
 plotSegmentFlat <- function(segmentationCSV, plotRows, 
@@ -312,7 +314,8 @@ plotSegmentProjection <- function(segmentationCSV, plotRows, projection = "aitof
 #' plotRows = c(1:1)
 #' plotSegmentEllipse(segmentationCSV, plotRows, projection = "aitoff", 
 #'   col = "red", singlePlot = TRUE, confidenceLevel = 0.05, 
-#'   alpha = thresholds, wrap = FALSE, greyGrid = FALSE)}
+#'   alpha = thresholds, wrap = FALSE, greyGrid = FALSE)
+#'  }
   
 plotSegmentEllipse <- function(segmentationCSV, plotRows, projection = "aitoff", 
 		col = "red", singlePlot = TRUE, confidenceLevel = 0.05, alpha = thresholds, wrap = FALSE, greyGrid = FALSE){

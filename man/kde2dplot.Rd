@@ -5,8 +5,8 @@
 \title{produces 2d kernel density plots.}
 \usage{
 kde2dplot(x, y = NULL, h, h.relative = 1, col = "red", add = FALSE,
-  drawlabels = FALSE, n = 100, shade = TRUE, breaks = c(0.1, 0.25, 0.5,
-  0.75, 0.9), ...)
+  drawlabels = FALSE, n = 100, shade = TRUE, breaks = c(0.1, 0.25,
+  0.5, 0.75, 0.9), ...)
 }
 \arguments{
 \item{x}{x coords}

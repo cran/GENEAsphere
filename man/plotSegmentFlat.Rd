@@ -4,8 +4,9 @@
 \alias{plotSegmentFlat}
 \title{Plot a flat representation}
 \usage{
-plotSegmentFlat(segmentationCSV, plotRows, col = c("white", heat.colors(5,
-  alpha = c(0.3, 0.2, 0.1, 0.05, 0.03))), singlePlot = TRUE, nsims = 1000)
+plotSegmentFlat(segmentationCSV, plotRows, col = c("white",
+  heat.colors(5, alpha = c(0.3, 0.2, 0.1, 0.05, 0.03))),
+  singlePlot = TRUE, nsims = 1000)
 }
 \arguments{
 \item{segmentationCSV}{The file path to the csv file created from the segmentation process containing all features.}
@@ -33,9 +34,10 @@ There is no return to the console. As a side effect a graphic is created.
 Create a flat representation of the spherical data.
 }
 \examples{
+\dontrun{
 segmentationCSV = system.file("data", "SegData.csv", package = "GENEAsphere")
 plotRows = c(1:5)
-plotSegmentFlat(segmentationCSV, plotRows, 
-                col = c("white",heat.colors(5, alpha = c(0.3, 0.2, 0.1, 0.05, 0.03))),
-                singlePlot = TRUE, nsims= 1000)
+plotSegmentFlat(segmentationCSV, plotRows,
+                col = c("white", heat.colors(5, alpha = c(0.3, 0.2, 0.1, 0.05, 0.03))),
+                singlePlot = TRUE, nsims= 1000)}
 }

@@ -4,8 +4,9 @@
 \alias{plotSphere}
 \title{Plot an 3D sequence with sedentary sphere}
 \usage{
-plotSphere(x, start = 0, end = 1, length = NULL, time.format = "auto",
-  density = FALSE, col, alpha, arrow = TRUE, levels, add = FALSE, ...)
+plotSphere(x, start = 0, end = 1, length = NULL,
+  time.format = "auto", density = FALSE, col, alpha, arrow = TRUE,
+  levels, add = FALSE, ...)
 }
 \arguments{
 \item{x}{The AccData input to be plotted}

@@ -51,5 +51,6 @@ segmentationCSV = system.file("data", "SegData.csv", package = "GENEAsphere")
 plotRows = c(1:1)
 plotSegmentEllipse(segmentationCSV, plotRows, projection = "aitoff", 
   col = "red", singlePlot = TRUE, confidenceLevel = 0.05, 
-  alpha = thresholds, wrap = FALSE, greyGrid = FALSE)}
+  alpha = thresholds, wrap = FALSE, greyGrid = FALSE)
+ }
 }

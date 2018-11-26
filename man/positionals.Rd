@@ -30,6 +30,8 @@ Creates a positionals plot of the GENEAcitv .bin data.
 From the raw data to create a representation of arm elevation and wrist rotation.
 }
 \examples{
+\dontrun{
 x = readRDS(system.file("extdata", "AccData.rds", package = "GENEAsphere"))
 positionals(x)
+}
 }

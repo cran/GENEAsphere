@@ -4,9 +4,9 @@
 \alias{plotSegmentSphere}
 \title{Create a spherical representation}
 \usage{
-plotSegmentSphere(segmentationCSV, plotRows, levels = c(0.9, 0.75, 0.5, 0.25,
-  0.1), singlePlot = TRUE, col = heat.colors(5), alpha = c(0.03, 0.05,
-  0.1, 0.2, 0.3), arrow = FALSE, nsims = 1000)
+plotSegmentSphere(segmentationCSV, plotRows, levels = c(0.9, 0.75, 0.5,
+  0.25, 0.1), singlePlot = TRUE, col = heat.colors(5),
+  alpha = c(0.03, 0.05, 0.1, 0.2, 0.3), arrow = FALSE, nsims = 1000)
 }
 \arguments{
 \item{segmentationCSV}{The file path to the csv file created from the segmentation process containing all features.}
@@ -42,9 +42,10 @@ Required columns are:\enumerate{
 }
 }
 \examples{
+\dontrun{
 segmentationCSV = system.file("data", "SegData.csv", package = "GENEAsphere")
 plotRows = c(1:1)
-plotSegmentSphere(segmentationCSV, plotRows, levels = c(0.9, 0.75, 0.5, 0.25, 0.1), 
-                  singlePlot = TRUE, col = heat.colors(5), 
-                  alpha = c(0.03, 0.05, 0.1, 0.2, 0.3), arrow = FALSE, nsims = 1000)
+plotSegmentSphere(segmentationCSV, plotRows, levels = c(0.9, 0.75, 0.5, 0.25, 0.1),
+                  singlePlot = TRUE, col = heat.colors(5),
+                  alpha = c(0.03, 0.05, 0.1, 0.2, 0.3), arrow = FALSE, nsims = 1000)}
 }
