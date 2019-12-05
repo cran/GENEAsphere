@@ -15,7 +15,9 @@
 #' @export
 #' 
 
-calculateEllipse <- function(means, sd, alpha = 0.05){
+calculateEllipse <- function(means, 
+                             sd, 
+                             alpha = 0.05){
 	
 	if(!is.vector(means, mode = "numeric") | length(means)!= 2){
 		stop("means must be a length 2 numeric vector.")

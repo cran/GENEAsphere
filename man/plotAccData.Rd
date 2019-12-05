@@ -8,7 +8,7 @@ plotAccData(x, what = c("sd", "mean", "temperature", "light", "voltage"),
   draw = TRUE, resolution = 200, ...)
 }
 \arguments{
-\item{x}{should be an Acc Data object.}
+\item{x}{should be an AccData object.}
 
 \item{what}{What variable to plot against time. Options are: \enumerate{
 \item sd: Standard of movement given the resolutions
